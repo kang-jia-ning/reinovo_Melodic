@@ -1,0 +1,104 @@
+# ============================================================
+# 统一换行符为 LF（Unix 风格）
+# 本工程为 ROS 1 / Linux 工程，所有文本文件必须使用 LF。
+# 否则在 Windows 上克隆后出现 CRLF，会导致：
+#   - shell 脚本报 "bad interpreter: /bin/bash^M"
+#   - launch / CMakeLists.txt 解析异常
+#   - git diff 出现整文件变更
+# ============================================================
+
+# 默认：自动识别文本文件，检出时统一使用 LF
+* text=auto eol=lf
+
+# ------------------------------------------------------------
+# 明确的文本类型（强制 LF）
+# ------------------------------------------------------------
+*.cpp      text eol=lf
+*.c        text eol=lf
+*.h        text eol=lf
+*.hpp      text eol=lf
+*.cc       text eol=lf
+*.py       text eol=lf
+*.sh       text eol=lf
+*.bash     text eol=lf
+
+*.xml      text eol=lf
+*.launch   text eol=lf
+*.xacro    text eol=lf
+*.urdf     text eol=lf
+*.world    text eol=lf
+*.sdf      text eol=lf
+*.yaml     text eol=lf
+*.yml      text eol=lf
+*.rviz     text eol=lf
+*.cfg      text eol=lf
+*.ini      text eol=lf
+*.msg      text eol=lf
+*.srv      text eol=lf
+*.action   text eol=lf
+
+*.txt      text eol=lf
+*.md       text eol=lf
+*.rst      text eol=lf
+*.json     text eol=lf
+
+# 工程配置与脚本（无扩展名）
+CMakeLists.txt  text eol=lf
+*.cmake         text eol=lf
+package.xml     text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+.gitmodules     text eol=lf
+Dockerfile      text eol=lf
+
+# ------------------------------------------------------------
+# 二进制文件（禁止换行符转换与 diff 文本化）
+# ------------------------------------------------------------
+# 3D 模型
+*.stl      binary
+*.STL      binary
+*.dae      binary
+*.obj      binary
+*.mesh     binary
+
+# 图像
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.bmp      binary
+*.pgm      binary
+*.ppm      binary
+*.ico      binary
+
+# 音频
+*.wav      binary
+*.mp3      binary
+*.ogg      binary
+
+# ROS 数据包
+*.bag      binary
+*.db3      binary
+
+# 编译产物 / 库 / 数据
+*.so       binary
+*.a        binary
+*.dll      binary
+*.exe      binary
+*.bin      binary
+*.pbstream binary
+*.pack     binary
+*.idx      binary
+*.deb      binary
+*.zip      binary
+*.tar      binary
+*.gz       binary
+*.7z       binary
+
+# ------------------------------------------------------------
+# GitHub 语言统计（避免第三方库干扰仓库主语言判定）
+# ------------------------------------------------------------
+src/ar_track_alvar/**       linguist-vendored
+src/robot_audio/AIUI/**     linguist-vendored
+src/robot_audio/libs/**     linguist-vendored
+src/robot_audio/src/jsoncpp/** linguist-vendored

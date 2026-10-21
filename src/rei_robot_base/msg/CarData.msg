@@ -1,0 +1,13 @@
+std_msgs/Header header
+float64[] motor_speed
+int8[] crash
+int8[] cliff
+float32[] ultrasound
+int8 smoke
+float32 power_voltage
+bool is_charge
+float32 tempareture
+float32 relative_humidity
+int8[4] input_io
+int8[7] output_io
+bool relay_status

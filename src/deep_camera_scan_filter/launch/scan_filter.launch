@@ -1,0 +1,16 @@
+<launch>
+      <!--node pkg="deep_camera_scan_filter"   type="deep_camera_scan_filter_node"  name="scan3_filter" output="screen">
+      <param  name="scan_in_name" value ="berxel_camera/scan" type="string"/>
+      <param name="scan_out_name" value = "berxel_camera/scan_filter" type="string"/>
+      </node-->
+
+      <node pkg="deep_camera_scan_filter"   type="deep_camera_scan_filter_node"  name="scan1_filter" output="screen">
+      <param  name="scan_in_name" value ="front_scan" type="string"/>
+      <param name="scan_out_name" value = "front_scan_filter" type="string"/>
+      </node>
+
+      <node pkg="deep_camera_scan_filter"   type="deep_camera_scan_filter_node"  name="scan2_filter" output="screen">
+      <param  name="scan_in_name" value ="back_scan" type="string"/>
+      <param name="scan_out_name" value = "back_scan_filter" type="string"/>
+      </node>
+</launch>

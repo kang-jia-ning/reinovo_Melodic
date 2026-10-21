@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="auto_charging" type="auto_charge" name="auto_charge" output = "screen" >
+		<param name="anchor_x" type="double" value="0.7"/>
+		<param name="anchor_y" type="double" value="1.22"/>
+		<param name="anchor_theta" type="double" value="-1.57"/>	
+	</node>
+</launch>

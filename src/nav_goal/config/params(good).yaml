@@ -1,0 +1,69 @@
+######################mode_chose######################
+rage_mode: "false"
+
+######################end_point######################
+beijing_x: 2.520
+beijing_y: 0.091
+beijing_z: 0.0
+beijing_w: 1.0
+
+shanghai_x: 1.082
+shanghai_y: 2.110
+shanghai_z: 0.0
+shanghai_w: 1.0
+
+guangzhou_x: 2.526
+guangzhou_y: 1.105
+guangzhou_z: 0.0
+guangzhou_w: 1.0
+
+shenzhen_x: 1.050
+shenzhen_y: 1.123
+shenzhen_z: 0.0
+shenzhen_w: 1.0
+
+jilin_x: 2.5215
+jilin_y: 2.1183
+jilin_z: 0.0
+jilin_w: 1.0
+
+charge_x: 0.592
+charge_y: 1.937
+charge_z: -0.617
+charge_w: 0.787
+
+goal6_x: 0.02136
+goal6_y: -0.0160
+goal6_z: 0.0
+goal6_w: 1.0
+
+goal7_x: 0.0221
+goal7_y: -0.01655
+goal7_z: 0.0
+goal7_w: 1.0
+
+######################pre_point######################
+beijing_pre_x: 1.8
+beijing_pre_y: 0.0891
+beijing_pre_z: 0.0
+beijing_pre_w: 1.0
+
+shanghai_pre_x: 0.58
+shanghai_pre_y: 2.110
+shanghai_pre_z: 0.0
+shanghai_pre_w: 1.0
+
+guangzhou_pre_x: 2.235
+guangzhou_pre_y: 1.105
+guangzhou_pre_z: 0.0
+guangzhou_pre_w: 1.0
+
+shenzhen_pre_x: 0.55
+shenzhen_pre_y: 1.123
+shenzhen_pre_z: 0.0
+shenzhen_pre_w: 1.0
+
+jilin_pre_x: 2.0
+jilin_pre_y: 2.1185
+jilin_pre_z: 0.0
+jilin_pre_w: 1.0

@@ -1,0 +1,17 @@
+subscribers:
+  - name:        "Default input"
+    topic:       "cmd_vel"
+    timeout:     0.5
+    priority:    0
+    short_desc:  "The default cmd_vel, controllers unaware that we are multiplexing cmd_vel should come here"
+
+  - name:        "Onboard joystick"
+    topic:       "joy/cmd_vel"
+    timeout:     1.0
+    priority:    10
+  - name:        "bc control"
+    topic:       "bumper_stop"
+    timeout:     0.5
+    priority:    9
+
+publisher:       "rei_cmd_vel"

@@ -1,0 +1,53 @@
+<launch>
+  <node pkg="jie_ware" type="costmap_cleaner" name="costmap_cleaner" />
+  <arg name="open_nav_rviz" default="true"/> <!--打开rviz-->
+  <arg name="map_file_name" default="demonew"/> 	<!--定义变量，默认值，后面可以传参原来reicom-->
+	<arg name="location_method" default="amcl_sim" 
+				doc="location type [amcl_sim, fake]"/>
+	<!--？？？false正常运行启动rviz，true不允许启动rviz-->
+  <include file="$(find bobac3_description)/launch/gazebo.launch">
+    <arg name="open_rviz" value="false"/>
+  </include>
+
+	<!--map_server-->
+	<include file="$(find bobac3_navigation)/launch/map_server.launch">
+		<arg name="map_file" value="$(arg map_file_name)"/>
+	</include>
+  
+	<!--move_base-->
+	<include file="$(find bobac3_navigation)/launch/move_base_sim.launch"/>
+
+	<!--location-->
+  	<node pkg="jie_ware" type="lidar_loc" name="lidar_loc" >
+	    <param name="base_frame" value="base_footprint" />
+	    <param name="odom_frame" value="odom" />
+	    <param name="laser_frame" value="fuse_lidar_link" />
+	    <param name="laser_topic" value="scan" />
+	</node>
+    <!-- 下面参数在上面 -->
+	<include file="$(find bobac3_navigation)/launch/$(arg location_method).launch">
+	 <arg name="map_file" value="$(arg map_file_name)"/>
+	</include>
+	
+	 <!-- **************** RVIZ ****************  -->
+  <group if="$(arg open_nav_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz"
+          args="-d $(find bobac3_navigation)/rviz/robot_navigation.rviz"/>	 <!-- rviz保存的配置文件 -->  
+  </group>
+
+
+    <!-- 寻点 -->
+    <node pkg="nav_goal" type="tiaoshi_node" name="tiaoshi_node"/> s
+    <!-- 开启语音服务 -->
+    <node pkg="robot_audio" type="voice_aiui_node" name="voice_aiui_node"/>
+	
+    <!-- 打开语音采集节点 -->
+    <node name="voice_collect" pkg="robot_audio" type="voice_collect_node" output="screen">
+        <!-- 音频文件目录 -->
+        <param name="audio_file" type="string" value="./AIUI/audio/audio.wav"/>
+    </node>
+
+</launch>
+
+
+

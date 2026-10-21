@@ -1,0 +1,14 @@
+<launch>
+    <!-- 打开机器人底盘节点 -->
+    <!-- <include file="$(find bobac3_navigation)/launch/bobac3_nav_2d.launch"/> -->
+    <include file="$(find robot_audio)/launch/voice_aiui.launch"/>
+    <include file="$(find ar_pose)/launch/ar_base.launch"/>
+    <include file="$(find auto_charging)/launch/auto_charging.launch"/>
+    <include file="$(find relative_move)/launch/relative_move.launch"/>
+    <!-- 打开客户端节点 -->
+    <node name="meals_delivered" type="meals_delivered.py" pkg="multi_task" output="screen" >
+        <param name="audio_file" value="$(find multi_task)/audio/" />
+        <rosparam file="$(find multi_task)/param/navigation_point.yaml" command="load" ns="navigation_point"/>
+        <rosparam file="$(find multi_task)/param/task_sequence.yaml" command="load" ns="task_sequence"/>
+    </node>
+</launch>

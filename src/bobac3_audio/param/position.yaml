@@ -1,0 +1,14 @@
+nav_sum: 3 # 导航点数量
+nav0:
+  name: "创客实验区"
+  position: [22.619, 5.92 ,1, 0]
+  text: "这里是创客实验区"
+nav1:
+  name: "甲醇实验区"
+  position: [15.0 ,5.0 ,1 ,0]
+  text: "这里是甲醇实验区"
+nav2:
+  name: "仿真实验区"
+  position: [0, 0, 0 ,1]
+  text: "这里是仿真实验区"
+

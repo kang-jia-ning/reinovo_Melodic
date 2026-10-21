@@ -1,0 +1,13 @@
+<launch>
+    <!-- 打开机器人底盘节点 -->
+    <!-- <include file="$(find bobac3_navigation)/launch/bobac3_nav_2d.launch"/> -->
+
+    <!-- <include file="$(find robot_audio)/launch/voice_aiui.launch"/> -->
+    <include file="$(find ar_pose)/launch/ar_base.launch"/>
+    <include file="$(find auto_charging)/launch/auto_charging.launch"/>
+    <include file="$(find relative_move)/launch/relative_move.launch"/>
+    <!-- 打开客户端节点 -->
+    <node name="Multipoint_Nav" type="multipoint_nav.py" pkg="multipoint_navigation" output="screen" >
+        <param name="audio_file" value="$(find multipoint_navigation)/audio/" />
+    </node>
+</launch>

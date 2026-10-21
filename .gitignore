@@ -1,0 +1,30 @@
+# 编译产物
+build/
+devel/
+install/
+logs/
+
+# ROS 运行时
+*.bag.active
+.ros/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 临时文件
+_shots/
+_extract.py
+*.tar.gz

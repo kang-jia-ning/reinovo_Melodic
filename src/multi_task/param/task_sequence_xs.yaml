@@ -1,0 +1,26 @@
+init_1:
+  set_relay: val False
+  reset_io: str all
+task_1: 
+  nav_goal: point office402
+  play_audio: str 开始执行消杀作业.wav
+  set_relay: val True
+  set_io: val 1
+nav_task_1:
+  nav_goal: point office404
+nav_task_3:
+  nav_goal: point office406
+nav_task_2:
+  nav_goal: point elevator1
+task_2:
+  nav_goal: point office405
+  set_relay: val False
+  reset_io: str all
+  play_audio: str 消杀作业已完成.wav
+init_2:
+  set_relay: val False
+  set_io: str all
+
+
+
+

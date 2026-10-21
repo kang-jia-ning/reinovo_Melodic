@@ -1,0 +1,35 @@
+# task_9:
+#   wait_voice: str 参观
+  
+task_0:
+  nav_goal: point 出发点
+  # voice_tts: str 我带大家参观一下吧！
+# task_1: 
+#   nav_goal: point 上海馆
+#   # voice_tts: str 上海是中国的经济中心
+# task_2: 
+#   nav_goal: point 深圳馆
+#   # voice_tts: str 深圳是中国的科创中心
+# task_3: 
+#   nav_goal: point 吉林馆
+#   # voice_tts: str 吉林位于我国东北是人参之都
+# task_4: 
+#   nav_goal: point 广州馆
+#   # voice_tts: str 广州自古都是我国的商业之都
+# task_5: 
+#   nav_goal: point 北京馆
+#   # voice_tts: str 北京是中国的首都，政治中心
+task_6:
+  nav_goal: point 充电桩
+  goto_charging: val False
+  # voice_tts: str 我开始充电了
+  # play_audio: str 自动充电成功.wav
+tesk_7:
+  wait_time: val 5
+  # voice_tts: str 充电结束
+  relative_move: val [0.2,0,0]
+task_8:
+  nav_goal: point 出发点
+
+
+

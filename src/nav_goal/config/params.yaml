@@ -1,0 +1,44 @@
+######################mode_chose######################
+rage_mode: "false"
+
+######################end_point######################
+beijing_x: 2.520
+beijing_y: 0.125
+beijing_z: 0.0
+beijing_w: 1.0
+
+shanghai_x: 1.046
+shanghai_y: 2.110
+shanghai_z: 0.0
+shanghai_w: 1.0
+
+guangzhou_x: 2.526
+guangzhou_y: 1.105
+guangzhou_z: 0.0
+guangzhou_w: 1.0
+
+shenzhen_x: 1.050
+shenzhen_y: 1.123
+shenzhen_z: 0.0
+shenzhen_w: 1.0
+
+jilin_x: 2.5215
+jilin_y: 2.1183
+jilin_z: 0.0
+jilin_w: 1.0
+
+charge_x: 0.592
+charge_y: 1.937
+charge_z: -0.617
+charge_w: 0.787
+
+goal6_x: 0.0176
+goal6_y: -0.0137
+goal6_z: 0.0
+goal6_w: 1.0
+
+goal7_x: 0.018
+goal7_y: -0.011
+goal7_z: 0.0
+goal7_w: 1.0
+

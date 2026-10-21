@@ -1,0 +1,41 @@
+<launch>
+  <arg name="open_nav_rviz" default="true"/>
+  <arg name="map_file_name" default="reicom"/>
+	<arg name="location_method" default="amcl_sim" 
+				doc="location type [amcl_sim, fake]"/>
+	<!--bobac3 model description-->
+  <include file="$(find bobac3_description)/launch/gazebo.launch">
+    <arg name="open_rviz" value="false"/>
+  </include>
+	<!--map_server-->
+	<include file="$(find bobac3_navigation)/launch/map_server.launch">
+		<arg name="map_file" value="$(arg map_file_name)"/>
+	</include>
+	<!--move_base-->
+	<include file="$(find bobac3_navigation)/launch/move_base_sim.launch"/>
+	<!--location-->
+	<include file="$(find bobac3_navigation)/launch/$(arg location_method).launch">
+	 <arg name="map_file" value="$(arg map_file_name)"/>
+	</include>
+	
+	<!--  **************** Visualisation ****************  -->
+  <group if="$(arg open_nav_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz"
+          args="-d $(find bobac3_navigation)/rviz/robot_navigation.rviz"/>
+  </group>
+
+    <!-- 寻点 -->
+    <node pkg="nav_goal" type="nav_multigoal_pro_node" name="nav_multigoal_pro_node"/>    
+    <!-- 开启语音服务 -->
+    <node pkg="robot_audio" type="voice_aiui_node" name="voice_aiui_node"/>
+	
+    <!-- 打开语音采集节点 -->
+    <node name="voice_collect" pkg="robot_audio" type="voice_collect_node" output="screen">
+        <!-- 音频文件目录 -->
+        <param name="audio_file" type="string" value="./AIUI/audio/audio.wav"/>
+    </node>
+
+</launch>
+
+
+

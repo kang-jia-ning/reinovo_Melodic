@@ -1,0 +1,8 @@
+<launch>
+    <!-- 打开底盘相机二维码检测 -->
+    <include file="$(find ar_pose)/launch/ar_base.launch"/>
+    <!-- 打开相对移动功能（服务端） -->
+    <include file="$(find relative_move)/launch/relative_move.launch"/>
+    <!-- 实验节点 -->
+    <node pkg="secondary_localization" name="secondary_localization" type="track_node" output="screen"/>
+</launch>

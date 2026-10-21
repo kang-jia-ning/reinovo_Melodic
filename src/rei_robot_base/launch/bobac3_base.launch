@@ -1,0 +1,25 @@
+<launch>
+  <node name="bobac3_base_node" pkg="rei_robot_base" type="robot_base_node" required="true">
+	  <!--robot_model该参数说明要控制机器人型号，本机器人为bobac3-->
+      <param name="robot_model" type="string" value="bobac3"/>
+	  <!--port:该参数指明底盘控制器所接的端口号默认为：/dev/ttyS2-->
+      <param name="port" type="string" value="/dev/ttyS2"/>
+	  <!--kinematics_mode:该参数指明机器人的运动学模型bobac3机器人为3-->
+      <param name="kinematics_mode" type="int" value="3"/>
+	  <!--wheel_radius:该参数指明轮子直径-->
+      <param name="wheel_radius" type="double" value="0.0505"/>
+	  <!--wheel_separation:该参数指明轮间距-->
+      <param name="wheel_separation_x" type="double" value="0.152"/>
+      <param name="wheel_separation_y" type="double" value="0.0"/>
+	  <!--max_vx:x方向最大速度-->
+      <param name="max_vx" type="double" value="0.7"/>
+	  <!--max_vy:y方向最大速度-->
+      <param name="max_vy" type="double" value="0.7"/>
+	  <!--max_vth:最大旋转速度-->
+    <param name="max_vth" type="double" value="1.0"/>
+    <param name="publis_odom" type="bool" value="true"/>
+    <param name="publis_odom_tf" type="bool" value="true"/>
+  <param name="range_1_frame_id" value="right_ultrasound_link"/>
+  <param name="range_2_frame_id" value="left_ultrasound_link"/>
+  </node>
+</launch>

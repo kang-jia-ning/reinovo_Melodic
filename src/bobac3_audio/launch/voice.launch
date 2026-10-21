@@ -1,0 +1,6 @@
+<launch>
+    <!-- 语音采集服务 -->
+  <include file="$(find robot_audio)/launch/voice_collect.launch"/>
+  <include file="$(find robot_audio)/launch/voice_aiui.launch"/>
+  
+</launch>

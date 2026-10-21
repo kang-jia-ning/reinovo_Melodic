@@ -1,0 +1,17 @@
+# serving_area:
+#   # nav_goal: point office405
+#   nav_goal: point gate
+#   voice_tts: str 请放置在托盘上
+
+# meals_delivered: 
+#   # nav_goal: point canteen
+#   nav_goal: point office2
+#   wait_face_recognition: str 刘雨航
+#   play_audio: str 取餐.wav
+
+task_1:
+  set_io: val 0
+  wait_time: val 1
+  reset_io: str all
+
+

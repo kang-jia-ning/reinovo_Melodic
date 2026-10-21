@@ -1,0 +1,4 @@
+velocity_based_clearer:
+  zero_vel_threshold: 8.0  # 零速持续时间阈值
+  cool_down: 6s.0          # 最小清除间隔
+  vel_tolerance: 0.001     # 速度判定容差

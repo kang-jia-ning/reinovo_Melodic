@@ -1,0 +1,7 @@
+<launch>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${node}] [${function}]: ${message}"/>
+    <node pkg="rei_robot_cruise" type="example_cruise" name="cruise_node">
+        <rosparam file="$(find rei_robot_cruise)/params/position.yaml" command="load" />
+        <param name = "read_params" type="bool" value="true"/>
+    </node>
+</launch>
